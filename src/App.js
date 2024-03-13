@@ -28,7 +28,7 @@ function TipCalculator() {
   useEffect(() => {
     tipCalculator();
     totalTipCalculator();
-  }, [bill, people, percent]);
+  }, [bill, people, percent, tipCalculator, totalTipCalculator]);
 
   function handlBillValue(e) {
     setBill(Number(e.target.value));
@@ -70,6 +70,7 @@ function TipCalculator() {
           <input
             type="number"
             placeholder="0"
+            defaultValue=""
             value={bill}
             onChange={(e) => handlBillValue(e)}
           ></input>
@@ -90,6 +91,7 @@ function TipCalculator() {
             value={inputPercent}
             type="number"
             placeholder="custom"
+            defaultValue=""
             className="custom-button percent"
             onChange={(e) => {
               setPercent((curr) => (curr = 0));
@@ -103,6 +105,7 @@ function TipCalculator() {
             value={people}
             type="number"
             placeholder="0"
+            defaultValue=""
             className="people"
             onChange={(e) => handlePeopleNumber(e)}
           ></input>
