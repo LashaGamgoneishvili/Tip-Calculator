@@ -82,19 +82,20 @@ function TipCalculator() {
         <div className="section" id="myDiv">
           {arr.map((curr, i) => (
             <Button
-              value={curr}
               key={i}
               onPersentCalculator={persentCalculator}
               onClick={persentCalculator}
               percent={percent}
+              value={percent}
+              currValue={curr}
             />
           ))}
           <input
-            value={inputPercent}
+            className="custom-button percent"
             type="number"
             placeholder="custom"
             defaultValue=""
-            className="custom-button percent"
+            value={inputPercent}
             onChange={(e) => {
               setPercent((curr) => (curr = 0));
               setInputPercent(e.target.value);
