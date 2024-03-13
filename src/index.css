@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+
+body {
+  background: #c5e4e7;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 144px 41px;
+  width: 100%;
+}
+.text {
+  font-size: 18px;
+  color: #3d6666;
+  letter-spacing: 1em;
+  line-height: 1.6em;
+}
+.conteiner {
+  border-radius: 10px;
+  background-color: #ffff;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px;
+}
+
+.main {
+  padding: 32px;
+}
+
+h3 {
+  color: #5e7a7d;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.inputbox {
+  position: relative;
+  display: flex;
+  padding-top: 6px;
+  height: 48px;
+  color: #f3f9fa;
+}
+
+.inputbox input {
+  /* border: none; */
+  outline: none;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 5px;
+  background: #f3f9fa;
+  color: #00474b;
+  text-align: right;
+  padding: 6px 19px;
+  border: 1px solid white;
+}
+
+.inputbox input:hover {
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#peopleBox::after {
+  content: "can't be zero";
+  position: absolute;
+  color: #e17457;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 700;
+  right: 0px;
+  top: -25px;
+  display: none;
+}
+
+#peopleBox.showAfterElement::after {
+  display: block;
+}
+
+#peopleInput.zeroValue {
+  border: 1px solid red;
+}
+
+.icon {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+}
+
+h4 {
+  color: #5e7a7d;
+  padding: 30px 0 16px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16.5px;
+  row-gap: 16.5px;
+  padding: 16px 0 32px 0;
+}
+
+.card {
+  background: #00474b;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  line-height: 35.5px;
+  color: #ffffff;
+}
+
+.custom-button {
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 24px;
+  line-height: 35.5px;
+  position: relative;
+  background: #f3f9fa;
+  border: 1px solid white;
+  color: #00474b;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0px 16px;
+}
+
+.custom-button:hover {
+  border: 1px solid green;
+}
+
+input::placeholder {
+  font-family: "Space Mono";
+  font-weight: 700;
+  color: #547878;
+}
+
+.card:hover {
+  background: #26c2ae;
+  transition: 0.3s;
+}
+
+.active,
+.percent:active {
+  color: #00474b;
+  background: #26c2ae;
+}
+
+.custom-button:hover {
+  background-color: #f3f9fa;
+}
+
+h5 {
+  position: relative;
+  color: #5e7a7d;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.calculator-box {
+  padding: 32px 24px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background: #00474b;
+  border-radius: 15px;
+  row-gap: 25px;
+  padding: 39px 22px 24px 24px;
+}
+
+.part p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #ffff;
+  display: inline;
+}
+
+.part-div {
+  display: flex;
+  justify-content: space-between;
+}
+.money .dollar {
+  display: inline;
+  font-size: 34px;
+  font-weight: 700;
+  color: #26c2ae;
+}
+
+.part span {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #7f9d9f;
+}
+
+.box button {
+  height: 48px;
+  background: #0d686d;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box button:hover {
+  background: #26c2ae;
+}
+
+@media (min-width: 950px) {
+  body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .conteiner {
+    width: 920px;
+    height: 481px;
+    border-radius: 25px;
+    display: flex;
+  }
+
+  .main {
+    padding: 45px 0 48px 48px;
+  }
+
+  .calculator-box {
+    width: 481px;
+    padding: 32px 32px 32px 48px;
+  }
+
+  .box {
+    padding: 56px 40px 49px 40px;
+    height: 100%;
+  }
+
+  .percent {
+    width: 117px;
+    height: 48px;
+    line-height: 35.54px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .money .dollar {
+    font-size: 48px;
+  }
+
+  .inputbox {
+    width: 100%;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .custom-button {
+    padding: 0 12px;
+  }
+  .card:hover {
+    background: #9fe8df;
+    transition: 0.3s;
+  }
+
+  .active,
+  .percent:active {
+    color: #00474b;
+  }
+
+  .box {
+    row-gap: 80px;
+  }
+
+  .box .reset {
+    width: 333px;
+    line-height: 50px;
+    background-color: #0d686d;
+    color: #00474b;
+  }
+}
