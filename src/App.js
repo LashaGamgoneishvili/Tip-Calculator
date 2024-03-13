@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import dollar from "./images/icon-dollar.svg";
 import person from "./images/icon-person.svg";
 import Background from "./Background.js";
