@@ -26,9 +26,18 @@ function TipCalculator() {
   const [reset, setReset] = useState();
 
   useEffect(() => {
+    function tipCalculator() {
+      let billValue = bill * (percent || inputPercent);
+      setTip(billValue);
+    }
+
+    function totalTipCalculator() {
+      let totalBillValue = (bill + bill * (percent || inputPercent)) / people;
+      setTotal(totalBillValue);
+    }
     tipCalculator();
     totalTipCalculator();
-  }, [bill, people, percent, tipCalculator, totalTipCalculator]);
+  }, [bill, people, percent, inputPercent]);
 
   function handlBillValue(e) {
     setBill(Number(e.target.value));
@@ -42,14 +51,6 @@ function TipCalculator() {
 
   function persentCalculator(e) {
     setPercent((Number(e.target.value) || setInputPercent) / 100);
-  }
-
-  function tipCalculator() {
-    setTip(bill * (percent || inputPercent));
-  }
-
-  function totalTipCalculator() {
-    setTotal((bill + bill * (percent || inputPercent)) / people);
   }
 
   function handleReset() {
